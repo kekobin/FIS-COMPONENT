@@ -1,0 +1,34 @@
+/*返回顶部*/
+.ww-backToTop {
+    display:none; 
+    position: fixed; 
+    z-index: 1000; 
+    bottom: 15%; 
+    right: 11px; 
+    width:55px; 
+    height:55px; 
+    overflow: hidden; 
+    background: url(./icon.png) 50% 50% no-repeat #f7f7f7; 
+    *background-position: 19px 50%;/*IE7有病*/
+
+    &:hover {
+        text-decoration: none;
+    }
+
+    em {
+        display: block; 
+        font-size: 12px; 
+        color: #fff; 
+        background: #fa0; 
+        line-height: 55px; 
+        overflow: hidden; 
+        text-align: center; 
+        width: 100%; 
+        cursor: pointer; 
+        position: absolute; 
+        right: -63px; 
+        top: 0; 
+        -webkit-transition: right .1s ease-out; 
+        transition: right .1s ease-out;
+    }
+}

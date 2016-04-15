@@ -1,0 +1,83 @@
+@charset "utf-8";
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;} 
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, code, form, fieldset, legend, button, input, select, textarea, th, td {margin: 0; padding: 0;}
+body, button, input, select, textarea {font: 12px/1.5 "Microsoft YaHei",tahoma,arial,\5b8b\4f53;} /* 雅黑："Microsoft YaHei" 或 \5FAE\8F6F\96C5\9ED1  */
+button, input, select, textarea {font-size: 100%;}
+ul, ol {list-style: none;} 
+h1, h2, h3, h4, h5, h6 {font-size: 100%; font-weight: normal;}
+
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {background: transparent; text-decoration: none;}
+a:hover {text-decoration: underline;}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active, a:hover {outline: 0;}
+
+img, fieldset, legend, abbr, button {border: none 0;}
+img {vertical-align: middle; *-ms-interpolation-mode: bicubic; *interpolation-mode: bicubic;}
+
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+abbr[title] {cursor: help; border-bottom: 1px dotted;}
+
+small {font-size: 80%;}
+sup {vertical-align: text-top;}
+sub {vertical-align: text-bottom;}
+em, i {font-style: normal;}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {display: block;} 
+audio, canvas, progress, video {display: inline-block; vertical-align: baseline;} 
+time, mark {display: inline;}
+mark {background: #ff0; color: #000;}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {overflow: visible;}
+
+button,
+select {text-transform: none;}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9.
+ * Hide the `template` element in IE, Safari, and Firefox < 22.
+ */
+[hidden],
+template {display: none;}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {cursor: default;}
+
+/**
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;  /* 1 */
+  padding: 0;  /* 2 */
+  vertical-align: middle;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {-webkit-appearance: none;}
+
+table {border-collapse: collapse; border-spacing: 0;}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {overflow: auto;}

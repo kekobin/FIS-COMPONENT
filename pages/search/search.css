@@ -1,0 +1,326 @@
+/**
+ * 搜索页CSS
+ *
+ **/
+.back{
+	margin: 20px auto;
+}
+.back a{
+	color: #ef5c3b;
+	font-size: 18px;
+	line-height: 18px;
+	text-decoration: none;
+}
+
+.search-bar{
+	margin: 50px auto;
+	width: 470px;
+	height: 47px;
+	background: #fff;
+	border: 1px solid #aaa;
+	cursor: pointer;
+	position: relative;
+	z-index: 1000;
+	margin-bottom: 80px;
+}
+.search-bar input{
+  border: none;
+  padding: 1px 3px 1px 5px;
+  width: 400px;
+  height: 45px;
+  line-height: 44px;
+  color: #999;
+  outline: none;
+}
+
+.search-bar.active{
+  background: #f4563b;
+  border-color: #f4563b;
+}
+
+.search-bar .search-btn{
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 60px;
+	height: 47px;
+}
+.search-bar .search-icon{
+	cursor: pointer;
+	display: inline-block;
+	*zoom: 1;
+	*display: inline;
+	width: 20px;
+	height: 20px;
+	background: url(./img/search-icon-big-hover.png) no-repeat;
+	margin: 12px 20px;
+	vertical-align: middle;
+}
+
+.search-bar.active .search-icon{
+	background: url(./img/search-icon-big.png) no-repeat;
+}
+
+.search-bar .search-list {
+  width: 100%;
+  position: absolute;
+  top: 48px;
+  border: 1px solid #d8d8d8;
+  border-top: none;
+  z-index: 100000;
+  background: #fff;
+  font-size: 14px;
+  display: none;
+}
+
+.search-bar .search-list li{
+  height: 32px;
+  line-height: 32px;
+  padding-left: 10px;
+  position: relative;
+}
+
+.search-bar .search-list li:hover{
+  background: #eee;
+  color: #f4563b;
+}
+.search-bar .search-list .time-icon{
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+  background: url(./img/time-icon.png) no-repeat;
+  margin: 3px;
+  vertical-align: super;
+  *vertical-align: middle;
+}
+.search-title{
+  border-bottom: 1px solid #d8d8d8;
+}
+.search-bar .search-list li:hover .time-icon{
+  background: url(./img/time-icon-hover.png) no-repeat;
+}
+.search-bar .search-list li .close-icon{
+  display: none;
+}
+.search-bar .search-list li:hover .close-icon{
+  position: absolute;
+  right: 8px;
+  top: 0;
+  display: block;
+  font-weight: bold;
+  vertical-align: middle;
+  color: #666; 
+}
+.search-bar .search-recommend li{
+  height: 32px;
+  line-height: 32px;
+}
+
+.search-bar .search-recommend li .order-icon{
+  font-size: 10px;
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+  margin: 3px;
+  vertical-align: super;
+  *vertical-align: middle;
+  background: url(./img/round-icon.png) no-repeat;
+  color: #fff;
+  line-height: 14px;
+  position: absolute;
+  top: 5px;
+  text-align: center;
+  
+}
+
+.search-bar .search-recommend li .order-icon.active{
+  background: url(./img/round-icon-active.png) no-repeat;
+}
+
+.search-bar .search-list .search-title{
+  padding-left: 10px;
+  height: 32px;
+  line-height: 32px;
+  font-size: 14px;
+  color: #999;
+}
+
+.search-bar .search-list .search-history.ahchor li{
+  height: 60px;
+  line-height: 60px;
+}
+.search-bar .search-list .search-history.ahchor li img{
+  vertical-align: super;
+  line-height: 60px;
+}
+
+.search-bar .search-list .search-title .keyword{
+  color: #f4563b;
+}
+.search-bar .history-keyword{
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+  width: 400px;
+  overflow:hidden;
+  -ms-text-overflow:ellipsis;
+  -o-text-overflow:ellipsis;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.search-bar .history-keyword.hot{
+	margin-left: 25px;
+}
+
+.search-bar .remove-all-history{
+	text-align: center;
+}
+
+.search-bar .search-list li.remove-all-history:hover{
+	background-color: #fff;
+}
+
+.search-bar .remove-all-history span{
+	padding: 4px 16px;
+	color: #000;
+	background-color: #eee;
+}
+.search-bar .remove-all-history span:hover{
+	color: #f4563b;
+}
+
+.search-result {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.search-result .result-container{
+	margin-bottom: 70px;
+}
+
+.search-result .result-title{
+	position: relative;
+}
+
+.search-result .result-title h3{
+	border-left: 3px solid #f6563c; 
+	padding-left: 5px;
+	font-weight: normal;
+	font-size: 16px;
+	margin: 16px 0;
+}
+
+.search-result ul:after,.search-result ul:after{
+	content: " ";
+	font-size: 0;
+	height: 0;
+	width: 0;
+	line-height: 0;
+	display: table;
+	clear: both;
+}
+
+.search-result .loading{
+	display: none;
+	text-align: center;
+	font-size: 12px;
+	margin-top: 15px;
+}
+
+.search-result .icon-loading{
+	vertical-align: middle;
+	display: inline-block;
+	background: url(./img/loading.gif) no-repeat;
+	width: 16px;
+	height: 16px;
+	margin-right: 4px;
+}
+
+.search-result .spread{
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 12px;
+	cursor: pointer;
+}
+.search-result .spread:hover{
+	color: #f6563c;
+}
+
+.search-result .spread-icon{
+	width: 9px;
+	height: 5px;
+	display: inline-block;
+	*zoom: 1;
+	*display: inline;
+	background: url(./img/icon-spread.png) no-repeat;
+	margin-left: 5px;
+	*margin-bottom: 5px;
+}
+
+.search-result .more-icon{
+	width: 5px;
+	height: 9px;
+	display: inline-block;
+	*zoom: 1;
+	*display: inline;
+	background: url(./img/ico_more.png) no-repeat;
+	margin-left: 5px;
+}
+
+.search-result .spread-icon-up{width: 9px; height: 5px; display: inline-block; *zoom: 1; *display: inline; background: url(./img/icon-spread_up.png) no-repeat; margin-left: 5px; *margin-bottom: 5px; }
+
+.search-result .anchor ul{zoom: 1; margin-right: -10px;} 
+.search-result .anchor ul:before,
+.search-result .anchor ul:after {display: table; content: ""} 
+.search-result .anchor ul:after {clear: both;} 
+.search-result .anchor ul.single{ height: 70px; overflow: hidden; *position: relative;} 
+.search-result .anchor ul.spreading{ height: auto; overflow: visible; }
+.search-result .anchor li {float: left; width: 230px; height: 70px; margin: 0 10px 20px 0; overflow: hidden;}
+.search-result .anchor li .anchor-pic { float: left; position: relative; width: 70px; height: 70px; overflow: hidden;}
+.search-result .anchor li .anchor-avatar {display: block; width: 100%; height: 100%;}
+.search-result .anchor li .anchor-avatar img {width: 100%; height: 100%;}
+.search-result .anchor li .anchor-info {overflow: hidden; zoom: 1; padding-left: 10px;}
+.search-result .anchor li .nick {display: block; width: 100%; padding-bottom: 3px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; color: #000;}
+.search-result .anchor li .level{width: 19px; height: 18px; margin: 3px 2px 0 0; display: inline-block; background: url(http://assets.dwstatic.com/project/yytv/center/2.9.1/img/anchor_level.png) no-repeat; }
+.search-result .anchor li .anchor-info p {color: #a7a4a5; margin: 3px 0 0; padding: 0;}
+.search-result .anchor li .label {
+    position: absolute; width: 100%; left: 0; bottom: 0; line-height: 2; color: #fff; text-align: center; 
+    background-color: rgba(245, 85, 59, 0.6); 
+    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr='#99f5553b',EndColorStr='#99f5553b'); zoom: 1;
+}
+.search-result .anchor li .label.disabled {
+    background-color: rgba(193, 193, 193, 0.8); 
+    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr='#ccc1c1c1',EndColorStr='#ccc1c1c1');
+}
+
+.screen-2 .search-result .anchor ul{margin-right: -15px;} 
+.screen-2 .search-result .anchor li{margin-right: 15px;} 
+
+.search-result .game .game-bd {zoom: 1;}
+.search-result .game .game-bd:before,
+.search-result .game .game-bd:after {display: table; content: ""}
+.search-result .game .game-bd:after {clear: both;}
+.search-result .game .game-list {zoom: 1; margin: 0 -10px -10px 0; }
+.search-result .game .game-list:before,
+.search-result .game .game-list:after {display: table; content: ""}
+.search-result .game .game-list:after {clear: both;}
+.search-result .game .game-item {float: left; margin: 0 10px 10px 0; width: 230px; height: 185px;}
+.search-result .game .game-item a {display: block; width: 100%; height: 100%; text-decoration: none;}
+.search-result .game .game-item .g-avatar{float: left; width: 120px; height: 100%;}
+.search-result .game .game-item .g-avatar img {width: 100%; height: 100%;}
+.search-result .game .game-item .g-info{overflow: hidden; zoom: 1; height: 100%; background: #eee; text-align: center; }
+.search-result .game .game-item .g-info .type-keyword{color: #f32d1e; } 
+.search-result .game .game-item .g-info table{margin: 60px auto; }
+.search-result .game .game-item .g-info .g-name{color: #f32d1e; }
+.search-result .game .game-liveList {height: 185px; overflow: hidden; zoom: 1; *position: relative;}
+
+.screen-2 .search-result .game .game-list {margin-right: -15px;}
+.screen-2 .search-result .game .game-item {margin-right: 15px;}
+
+.search-null {width: 100%;}

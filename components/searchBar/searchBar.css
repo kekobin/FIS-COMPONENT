@@ -1,0 +1,31 @@
+/**
+ * 首页搜索框CSS
+ **/
+.search-bar{position: relative; width: 100%;}
+.search-bar input {width: 423px; padding: 3px 30px 3px 5px; height: 18px; line-height: 18px; border: 1px solid #aaa; border-radius: 3px; font-size: 14px; color: #999;}
+.search-bar input:focus {border-color: #f4563b;}
+.search-bar .search-btn {position: absolute; top: 0; right: 0; width: 26px; height: 26px; cursor: pointer; border-radius: 0 3px 3px 0;}
+.search-bar .search-icon {display: block; margin: 7.5px auto; width: 11px; height: 11px; background: url(img/search-icon-hover.png) no-repeat;}
+.search-bar.active .search-btn {background-color: #f4563b;}
+.search-bar.active .search-icon{background: url(img/search-icon.png) no-repeat;}
+
+.search-bar .search-list {width: 100%; position: absolute; top: 100%; border: 1px solid #d8d8d8; border-top: none; z-index: 100000; background: #fff; font-size: 14px; display: none;}
+.search-bar .search-list li{height: 32px; line-height: 32px; padding-left: 10px; }
+.search-bar .search-list li:hover{background: #eee; color: #f4563b; }
+.search-bar .search-list .time-icon{width: 14px; height: 14px; display: inline-block; *zoom: 1; *display: inline; background: url(img/time-icon.png) no-repeat; margin: 3px; vertical-align: super; }
+.search-title{border-bottom: 1px solid #d8d8d8; } 
+.search-bar .search-list li:hover .time-icon{background: url(img/time-icon-hover.png) no-repeat; } 
+.search-bar .search-list li .close-icon{display: none; }
+.search-bar .search-list li:hover .close-icon{display: block; font-weight: bold; float: right; margin-right: 8px; vertical-align: middle; color: #666; }
+.search-bar .search-recommend li{height: 32px; line-height: 32px; }
+.search-bar .search-recommend li .order-icon{color: #fff; display: inline-block; *zoom: 1; *display: inline; width: 14px; height: 32px; line-height: 14px; font-size: 10px; font-weight: 100; vertical-align: middle; background: url(img/round-icon.png) no-repeat; text-align: center; margin: 0 5px 6px 0; }
+.search-bar .search-recommend li .order-icon.active{background: url(img/round-icon-active.png) no-repeat; }
+.search-bar .search-list .search-title{padding-left: 10px; height: 32px; line-height: 32px; font-size: 14px; color: #999; }
+.search-bar .search-list .search-history.ahchor li{height: 60px; line-height: 60px; }
+.search-bar .search-list .search-history.ahchor li img{vertical-align: super; line-height: 60px; }
+.search-bar .search-list .search-title .keyword{color: #f4563b; }
+.search-bar .history-keyword{display: inline-block; *zoom: 1; *display: inline; width: 160px; overflow:hidden; -ms-text-overflow:ellipsis; -o-text-overflow:ellipsis; text-overflow:ellipsis; white-space:nowrap; }
+.search-bar .remove-all-history{text-align: center; }
+.search-bar .search-list li.remove-all-history:hover{background-color: #fff; }
+.search-bar .remove-all-history span{padding: 4px 16px; color: #000; background-color: #eee; }
+.search-bar .remove-all-history span:hover{color: #f4563b;}

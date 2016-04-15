@@ -1,0 +1,154 @@
+a{color: #333;}
+a:hover{text-decoration: none; color: #f5563c;}
+.clearfix:after{visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0}
+.clearfix{zoom:1}
+.ellipsis{white-space:nowrap;word-wrap:normal;overflow:hidden;-ms-text-overflow:ellipsis;-o-text-overflow:ellipsis;text-overflow:ellipsis;width:100%; overflow:hidden;}
+.fl,.fr{_display:inline}
+.fl{float:left}
+.fr{float:right}
+i,em{font-style:normal}
+img{max-width:100%; height:auto;}
+
+html,body{ width: 100%; height: 100%; overflow: hidden; background: #fff; color: #333;}
+.wrap-scroll{width:100%; height:100%;}
+
+/* 
+ * 自定义滚动条 
+ */
+.jspContainer {overflow: hidden; position: relative; width: 100% !important; /*性能优化：这里设置宽度能提高页面布局的响应速度*/}
+.jspPane {position: absolute; z-index: 1; width: 100% !important; /*性能优化：这里设置宽度能提高页面布局的响应速度*/} 
+.jspVerticalBar,
+.jspHorizontalBar {position: absolute; z-index: 2; background: #fff;}
+.jspVerticalBar {top: 0; right: 0; width: 11px; height: 100%;}
+.jspHorizontalBar {bottom: 0; left: 0; width: 100%; height: 11px;}
+.jspCap {display: none; }
+.jspHorizontalBar .jspCap {float: left; }
+.jspTrack {background: #fff; position: relative; }
+.jspTrack:hover {background: #EBEBEB;}
+
+.jspDrag {background: #C8C8C8; position: relative; top: 0; left: 0; cursor: pointer; }
+.jspDrag:hover {background: #a8a8a8;}
+.jspDrag:before, 
+.jspDrag:after {content: ""; position: absolute; overflow: hidden; background: url(../img/jspradius.png?__inline);}
+
+.jspVerticalBar .jspDrag {margin-right: 1px;}
+.jspVerticalBar .jspDrag:before, 
+.jspVerticalBar .jspDrag:after {left: 0; width: 10px; height: 5px;} 
+.jspVerticalBar .jspDrag:before {top: 0; background-position: 0 0;}
+.jspVerticalBar .jspDrag:after {bottom: 0; background-position: 0 -5px;}
+.jspVerticalBar:hover .jspDrag:before {background-position: -20px 0;}
+.jspVerticalBar:hover .jspDrag:after {background-position: -20px -5px;}
+.jspVerticalBar .jspDrag:hover:before {background-position: -10px 0;}
+.jspVerticalBar .jspDrag:hover:after {background-position: -10px -5px;}
+
+.jspHorizontalBar .jspDrag {float: left; height: 10px;}
+.jspHorizontalBar .jspDrag:before, 
+.jspHorizontalBar .jspDrag:after {top: 0; width: 5px; height: 10px;} 
+.jspHorizontalBar .jspDrag:before {left: 0; background-position: 0 0;}
+.jspHorizontalBar .jspDrag:after {right: 0; background-position: -5px 0;}
+.jspHorizontalBar:hover .jspDrag:before {left: 0; background-position: -20px 0;}
+.jspHorizontalBar:hover .jspDrag:after {right: 0; background-position: -25px 0;}
+.jspHorizontalBar .jspDrag:hover:before {background-position: -10px 0;}
+.jspHorizontalBar .jspDrag:hover:after {background-position: -15px 0;}
+
+.jspHorizontalBar .jspTrack {float: left; height: 100%; }
+.jspArrow {display: none;} 
+.jspCorner {background: #EBEBEB; float: left; height: 100%;}
+
+/*定制*/
+.jspScrollable {width:100% !important; /*性能优化：这里设置宽度能提高页面布局的响应速度*/;}
+.jspHorizontalBar {height: 0 !important; overflow: hidden;}
+.jspVerticalBar .jspTrack {height: 100% !important;}
+
+/* 适配 */
+.wrapper {position: relative; margin: 0 auto;}
+
+@mixin wrapper-s () {
+    .wrapper {width: 710px}
+}
+
+@mixin wrapper-m () {
+    .wrapper {width: 950px}
+}
+
+@mixin wrapper-l () {
+    .wrapper {width: 1210px}
+}
+
+// 默认窄屏
+@include wrapper-s();
+
+@media only screen and (min-width: 990px) {
+    @include wrapper-m();
+}
+@media only screen and (min-width: 1250px) {
+    @include wrapper-l();
+}
+
+/* 不支持媒体查询的 用js实现 */
+.screen-0 {@include wrapper-s();}
+.screen-1 {@include wrapper-m();}
+.screen-2 {@include wrapper-l();}
+
+@mixin clearfix () { 
+    zoom: 1;
+
+    &:before, 
+    &:after {
+        display: table; 
+        content: "";
+        line-height: 0;
+    }
+
+    &:after {clear: both;}
+}
+
+/*
+ * 公共组件 
+ */
+.m-empty {line-height: 2; color: #666; text-align: center;}
+.m-mask {
+    display:none; position: absolute; top: 0;left: 0; width: 100%; height: 100%; cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.35); 
+    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr='#59000000',EndColorStr='#59000000');
+}
+.m-mask i {position: absolute; left: 50%; top: 50%; margin: -15px 0 0 -12.5px; width: 25px; height: 30px; background: url(../img/play.png) no-repeat;}
+.m-load {position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: url(../img/loading.gif) 50% 50% no-repeat;}
+.m-loading {background-image: url(../img/loading.gif); background-position: 50% 50%; background-repeat: no-repeat;}
+
+.m-tit {
+    display: block;
+    font-size: 24px; 
+    padding-left: .7em; 
+    line-height: 1.1;
+    border-left: 3px solid #F5563C; 
+
+    &:hover{color:#f5563c; text-decoration: none;} 
+}
+.m-box {}
+.m-box-hd {
+    @include clearfix();
+    .m-tit {float: left;}
+    .hd-more{
+        float: right; 
+        margin-top:10px; 
+        font-size: 14px; 
+        i {padding-left: .3em; font-family: \5b8b\4f53; color: #f5563c;}
+    }
+    .hd-more:hover{color: #f5563c;}
+}
+.m-box-bd {padding-top: 10px;}
+
+
+.m-listLoaded {
+    display: block;
+    width: 600px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 3px;
+    background-color: #edeff4;
+    border: 1px solid #e7e8eb;
+    margin: 10px auto 50px;
+    text-align: center;
+    color: #747474;
+}

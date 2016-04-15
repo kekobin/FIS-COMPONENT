@@ -1,0 +1,114 @@
+﻿@mixin clearfix () { 
+    zoom: 1;
+
+    &:before, 
+    &:after {
+        display: table; 
+        content: "";
+        line-height: 0;
+    }
+
+    &:after {clear: both;}
+}
+
+.game-box {
+    padding-top: 10px;
+    .sub-title {
+        float: left;
+        margin: 8px 0 0 8px;
+        font-size: 12px;
+    }
+}
+
+.game-list {
+    @include clearfix();
+    
+    margin-right: -20px;
+    
+    .game-list-item {
+        float: left;
+        overflow: hidden;
+        margin-bottom:30px;
+        margin-right: 20px;
+        width: 126px;
+
+        a {
+            display: block; 
+            border: 1px solid #dcdcdc; 
+            text-align: center;
+            text-decoration: none;
+
+            img {
+                width: 100%;
+                height: 195px;
+                -webkit-transition: opacity .3s ease-out;
+                transition: opacity .3s ease-out;
+            }
+            p {font-size: 14px; line-height: 2; white-space: nowrap; text-overflow: ellipsis; word-wrap: normal; overflow: hidden;}
+
+            &:hover {
+                border-color: red;
+                img {
+                    filter: alpha(opacity=70);
+                    opacity: .7;
+                }
+            }
+        }
+    }
+}
+
+.game-filter{
+    float: right;
+    ul{
+        float: left;
+    }
+    li{
+        float: left;
+        width: 78px;
+        border: 1px solid #d3d3d3;
+        background: #f5f5f5;
+        margin-left: 10px;
+        &.cur a{
+            color: #f45b32;
+        }
+        a{
+            display: block;
+            line-height: 23px;
+            text-align: center;
+            color: #666;
+            &:hover{
+                text-decoration: none;
+                color: #f45b32;
+            }
+        }
+    }
+}
+
+
+
+/*
+ * 适配
+ */
+@mixin screen-s () {
+    .game-list {margin-right: -20px}
+    .game-list-item {margin-right: 20px}
+}
+
+@mixin screen-m () {
+    .game-list {margin-right: -11px}
+    .game-list-item {margin-right: 11px}
+}
+
+@mixin screen-l () {
+    .game-list {margin-right: -28.85px}
+    .game-list-item {margin-right: 28.85px}
+}
+
+@include screen-s();
+@media only screen and (min-width: 990px) {@include screen-m();}
+@media only screen and (min-width: 1250px) {@include screen-l();}
+
+/* 不支持媒体查询的 用js实现 */
+.screen-0 {@include screen-s();}
+.screen-1 {@include screen-m();}
+.screen-2 {@include screen-l();}
